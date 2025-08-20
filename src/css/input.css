@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Fonts */
+  --font-sf: 'SF Pro', sans-serif;
+
+  /* ================= Colors ================= */
+
+  /* Neutral (Gray scale) */
+  --color-neutral-25: #fdfdfd;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e9eaeb;
+  --color-neutral-300: #d5d7da;
+  --color-neutral-400: #aa7a7e;
+  --color-neutral-500: #717680;
+  --color-neutral-600: #535862;
+  --color-neutral-700: #414651;
+  --color-neutral-800: #252b37;
+  --color-neutral-900: #181d27;
+  --color-neutral-950: #0a0d12;
+
+  /* Primary */
+  --color-primary-100: #0a0d12; /* sesuai style guide */
+
+  /* Accent */
+  --color-red: #d9206e;
+  --color-green: #079455;
+  --color-yellow: #fdb022;
+
+  /* Base */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ================= Typography ================= */
+  /* 
+    leading is line height
+    tracking is letter spacing 
+  */
+  /* Typography – Display Sizes */
+
+  --text-display-3xl: 3.75rem; /* 60px */
+  --leading-display-3xl: 4.5rem; /* 72px */
+  --tracking-display-3xl: -0.093rem; /* -1.5px */
+
+  --text-display-2xl: 3rem; /* 48px */
+  --leading-display-2xl: 3.75rem; /* 60px */
+  --tracking-display-2xl: -0.031rem; /* -0.5px */
+
+  --text-display-xl: 2.5rem; /* 40px */
+  --leading-display-xl: 3rem; /* 48px */
+  --tracking-display-xl: -0.016rem; /* -0.25px */
+
+  --text-display-lg: 2.25rem; /* 36px */
+  --leading-display-lg: 2.75rem; /* 44px */
+  --tracking-display-lg: -0.016rem;
+
+  --text-display-md: 2rem; /* 32px */
+  --leading-display-md: 2.5rem; /* 40px */
+  --tracking-display-md: -0.016rem;
+
+  --text-display-sm: 1.75rem; /* 28px */
+  --leading-display-sm: 2.25rem; /* 36px */
+  --tracking-display-sm: -0.016rem;
+
+  --text-display-xs: 1.5rem; /* 24px */
+  --leading-display-xs: 2rem; /* 32px */
+  --tracking-display-xs: -0.016rem;
+
+  /* Typography – Text Sizes */
+  --text-text-xl: 1.25rem; /* 20px */
+  --leading-text-xl: 1.75rem; /* 28px */
+
+  --text-text-lg: 1.125rem; /* 18px */
+  --leading-text-lg: 1.75rem; /* 28px */
+
+  --text-text-md: 1rem; /* 16px */
+  --leading-text-md: 1.5rem; /* 24px */
+
+  --text-text-sm: 0.875rem; /* 14px */
+  --leading-text-sm: 1.25rem; /* 20px */
+
+  --text-text-xs: 0.75rem; /* 12px */
+  --leading-text-xs: 1rem; /* 16px */
+
+  /* ================= Border Radius ================= */
+  --radius-none: 0rem; /* 0px */
+  --radius-xxs: 0.125rem; /* 2px */
+  --radius-xs: 0.25rem; /* 4px */
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.625rem; /* 10px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
+  --radius-3xl: 1.25rem; /* 20px */
+  --radius-4xl: 1.5rem; /* 24px */
+  --radius-full: 9999px; /* Full pill/round */
+
+  /* ================= Spacing ================= */
+  --spacing-none: 0rem; /* 0px */
+  --spacing-xxs: 0.125rem; /* 2px */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.375rem; /* 6px */
+  --spacing-md: 0.5rem; /* 8px */
+  --spacing-lg: 0.75rem; /* 12px */
+  --spacing-xl: 1rem; /* 16px */
+  --spacing-2xl: 1.25rem; /* 20px */
+  --spacing-3xl: 1.5rem; /* 24px */
+  --spacing-4xl: 2rem; /* 32px */
+  --spacing-5xl: 2.5rem; /* 40px */
+  --spacing-6xl: 3rem; /* 48px */
+  --spacing-7xl: 4rem; /* 64px */
+  --spacing-8xl: 5rem; /* 80px */
+  --spacing-9xl: 6rem; /* 96px */
+  --spacing-10xl: 7.5rem; /* 120px */
+  --spacing-11xl: 8.75rem; /* 140px */
+}
