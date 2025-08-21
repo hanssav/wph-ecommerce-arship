@@ -7,10 +7,120 @@
     <title>Document</title>
   </head>
   <body class="font-sf">
-    <h1 class="text-3xl font-bold text-red">Home pages</h1>
+    <header
+      class="min-h-18 lg:h-[84px] flex px-4 gap-4 items-center w-full lg:px-[120px] lg:gap-20"
+    >
+      <img
+        id="logo"
+        src="./public/images/mobile-logo.svg"
+        alt="logo"
+        class="logo flex-none w-8 h-8 lg:min-h-[42px] lg:min-w-40"
+      />
 
+      <div class="flex gap-[6px] lg:gap-3 grow">
+        <button
+          class="border border-neutral-300 rounded-xl p-2 flex items-center justify-center lg:px-4 lg:gap-[6px] font-normal text-sm leading-sm"
+        >
+          <img src="./public/icons/catalog.svg" alt="catalog-logo" class="" />
+          <span class="hidden lg:block">Catalog</span>
+        </button>
+
+        <div class="relative w-full">
+          <span
+            class="absolute inset-y-0 left-0 flex items-center pl-3 lg:px-4 lg:py-2"
+          >
+            <img
+              src="./public/icons/search.svg"
+              alt="search-icon"
+              class="h-4 w-4 text-gray-400"
+            />
+          </span>
+
+          <input
+            id="search"
+            type="text"
+            placeholder="Search"
+            class="border border-neutral-300 rounded-xl py-2 pl-10 pr-2 w-full max-w-full lg:h-full"
+          />
+        </div>
+      </div>
+
+      <div
+        class="flex gap-3 flex-none lg:w-[257px] lg:justify-between items-center"
+      >
+        <div class="relative">
+          <!-- Cart Icon -->
+          <img src="./public/icons/cart.svg" alt="cart-icon" class="h-6 w-6" />
+          <!-- Badge -->
+          <span
+            class="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#EE1D52] text-white text-xs"
+          >
+            1
+          </span>
+        </div>
+
+        <button
+          class="hidden border border-neutral-300 rounded-xl lg:flex px-4 gap-[6px] min-w-[200px] min-h-[44px] items-center"
+        >
+          <img src="./public/icons/user.svg" alt="" />
+          <span>Jhon Doe</span>
+        </button>
+
+        <!-- Hamburger Icon -->
+        <img
+          src="./public/icons/hamburger.svg"
+          alt="hamburger-icon"
+          class="h-6 w-6 lg:hidden"
+        />
+      </div>
+    </header>
+
+    <main class="px-4 py-6 lg:px-[120px]">
+      <div
+        class="hero flex bg-[#F3D7A4] text-[#553E32] rounded-[12px] items-center lg:h-[375px] lg:rounded-2xl lg:px-12 lg:gap-16"
+      >
+        <img
+          src="./public/images/hero-image.svg"
+          alt="hero-images"
+          class="h-full lg:max-h-full"
+        />
+        <div class="hero-text flex flex-col gap-3 lg:gap-6">
+          <div class="flex flex-col lg:gap-2">
+            <h3
+              class="font-bold text-md leading-lg lg:text-display-3xl lg:leading-display-3xl"
+            >
+              New Collection
+            </h3>
+            <p
+              class="font-medium text-[10px] leading-[20px] lg:text-display-xs lg:leading-display-xs"
+            >
+              Stylish men's apparel for every occasion
+            </p>
+          </div>
+          <button
+            class="bg-black text-white rounded-[6px] max-w-[93px] font-semibold text-[10px] leading-md lg:text-md lg:leading-md lg:rounded-md lg:max-w-[180px] lg:h-12"
+          >
+            Get Now
+          </button>
+        </div>
+      </div>
+    </main>
     <script>
-      // script ini here
+      const logo = document.getElementById('logo');
+
+      function updateLogo() {
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+          logo.src = './public/images/desktop-logo.svg';
+        } else {
+          logo.src = './public/images/mobile-logo.svg';
+        }
+      }
+
+      // jalankan pertama kali
+      updateLogo();
+
+      // update kalau resize layar
+      window.addEventListener('resize', updateLogo);
     </script>
   </body>
 </html>
