@@ -39,49 +39,50 @@
   */
   /* Typography – Display Sizes */
 
+  /* Display Sizes */
   --text-display-3xl: 3.75rem; /* 60px */
   --leading-display-3xl: 4.5rem; /* 72px */
-  --tracking-display-3xl: -0.093rem; /* -1.5px */
 
   --text-display-2xl: 3rem; /* 48px */
   --leading-display-2xl: 3.75rem; /* 60px */
-  --tracking-display-2xl: -0.031rem; /* -0.5px */
 
   --text-display-xl: 2.5rem; /* 40px */
   --leading-display-xl: 3rem; /* 48px */
-  --tracking-display-xl: -0.016rem; /* -0.25px */
 
   --text-display-lg: 2.25rem; /* 36px */
   --leading-display-lg: 2.75rem; /* 44px */
-  --tracking-display-lg: -0.016rem;
 
   --text-display-md: 2rem; /* 32px */
   --leading-display-md: 2.5rem; /* 40px */
-  --tracking-display-md: -0.016rem;
 
   --text-display-sm: 1.75rem; /* 28px */
-  --leading-display-sm: 2.25rem; /* 36px */
-  --tracking-display-sm: -0.016rem;
+  --leading-display-sm: 2.375rem; /* 38px */
 
   --text-display-xs: 1.5rem; /* 24px */
-  --leading-display-xs: 2rem; /* 32px */
-  --tracking-display-xs: -0.016rem;
+  --leading-display-xs: 2.25rem; /* 36px */
 
-  /* Typography – Text Sizes */
-  --text-text-xl: 1.25rem; /* 20px */
-  --leading-text-xl: 1.75rem; /* 28px */
+  /* Text Sizes */
+  --text-xl: 1.25rem; /* 20px */
+  --leading-xl: 2.125rem; /* 34px */
 
-  --text-text-lg: 1.125rem; /* 18px */
-  --leading-text-lg: 1.75rem; /* 28px */
+  --text-lg: 1.125rem; /* 18px */
+  --leading-lg: 2rem; /* 32px */
 
-  --text-text-md: 1rem; /* 16px */
-  --leading-text-md: 1.5rem; /* 24px */
+  --text-md: 1rem; /* 16px */
+  --leading-md: 1.875rem; /* 30px */
 
-  --text-text-sm: 0.875rem; /* 14px */
-  --leading-text-sm: 1.25rem; /* 20px */
+  --text-sm: 0.875rem; /* 14px */
+  --leading-sm: 1.75rem; /* 28px */
 
-  --text-text-xs: 0.75rem; /* 12px */
-  --leading-text-xs: 1rem; /* 16px */
+  --text-xs: 0.75rem; /* 12px */
+  --leading-xs: 1.5rem; /* 24px */
+
+  /* Font weight mapping */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 
   /* ================= Border Radius ================= */
   --radius-none: 0rem; /* 0px */
