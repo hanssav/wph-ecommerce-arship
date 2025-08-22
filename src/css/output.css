@@ -254,8 +254,20 @@
   .mx-3 {
     margin-inline: calc(var(--spacing) * 3);
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
+  }
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
+  .my-12 {
+    margin-block: calc(var(--spacing) * 12);
   }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
@@ -732,6 +744,11 @@
   .checked\:bg-black {
     &:checked {
       background-color: var(--color-black);
+    }
+  }
+  .lg\:my-12 {
+    @media (width >= 64rem) {
+      margin-block: calc(var(--spacing) * 12);
     }
   }
   .lg\:block {
