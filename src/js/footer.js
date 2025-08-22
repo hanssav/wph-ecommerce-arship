@@ -1,8 +1,8 @@
 const socialIcons = [
-  { name: 'facebook', src: './public/icons/social-facebook.svg' },
-  { name: 'twitter', src: './public/icons/social-instagram.svg' },
-  { name: 'instagram', src: './public/icons/social-linkdin.svg' },
-  { name: 'linkedin', src: './public/icons/social-tiktok.svg' },
+  { name: 'facebook', src: '/src/public/icons/social-facebook.svg' },
+  { name: 'twitter', src: '/src/public/icons/social-instagram.svg' },
+  { name: 'instagram', src: '/src/public/icons/social-linkdin.svg' },
+  { name: 'linkedin', src: '/src/public/icons/social-tiktok.svg' },
 ];
 
 const container = document.getElementById('social-logo');

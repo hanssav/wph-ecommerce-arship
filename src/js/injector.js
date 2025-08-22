@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   components.forEach((el) => {
     const name = el.getAttribute('data-component');
-    fetch(`./components/${name}.html`)
+    fetch(`/src/components/${name}.html`)
       .then((res) => res.text())
       .then((html) => {
         el.innerHTML = html;
