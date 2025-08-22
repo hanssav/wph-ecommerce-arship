@@ -24,6 +24,7 @@ function renderProducts(products) {
               <h4 class="price font-bold">Rp.${product.price.toLocaleString()}</h4>
               <div class="flex justify-items-cente gap-[2px]">
                 <img src="/src/public/icons/star-rating.svg" alt="star-rating" />
+
                 <p>${product.rating}</p>
               </div>
             </div>
