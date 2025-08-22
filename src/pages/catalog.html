@@ -9,9 +9,225 @@
   <body class="font-sf">
     <div data-component="header" id="header"></div>
 
-    <main class="px-4 py-6 lg:px-[120px]"></main>
+    <main class="px-4 py-6 lg:px-[120px]">
+      <section class="flex flex-col lg:gap-6">
+        <h1 class="pb-1 font-bold text-display-xs leading-display-xs">
+          Catalog
+        </h1>
+        <div class="flex lg:gap-6">
+          <!-- SIDE -->
+          <div
+            class="hidden lg:block lg:basis-[25%] gap-3 lg:gap-6 py-4 rounded-xl border border-neutral-300 h-fit"
+          >
+            <div class="flex flex-col gap-[10px] py-4 px-4">
+              <h4 class="font-bold text-md leading-md">FILTER</h4>
+              <h4 class="font-semibold text-md leading-md">Categori</h4>
+
+              <div id="categories" class="flex flex-col gap-2"></div>
+
+              <!-- VANILA -->
+              <!-- <label
+                class="inline-flex items-center gap-2 cursor-pointer relative"
+              >
+                <input
+                  type="checkbox"
+                  class="peer appearance-none w-5 h-5 border border-neutral-300 rounded-sm bg-white checked:bg-black checked:border-neutral-300"
+                  checked
+                />
+                <svg
+                  class="absolute w-5 h-5 text-white hidden peer-checked:block pointer-events-none"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-medium text-md leading-md">All</span>
+              </label> -->
+            </div>
+
+            <hr class="border border-neutral-300 my-4" />
+
+            <div class="flex flex-col gap-[10px] p-4">
+              <h4 class="font-semibold text-md leading-md">Price</h4>
+              <div
+                class="flex items-center border border-neutral-300 rounded-md overflow-hidden w-full"
+              >
+                <span
+                  class="m-1 px-3 py-2 bg-neutral-200 text-neutral-900 font-semibold"
+                  >Rp</span
+                >
+                <input
+                  type="number"
+                  placeholder="Minimum Price"
+                  class="w-full px-3 py-2 outline-none text-neutral-700 placeholder-neutral-500"
+                />
+              </div>
+
+              <div
+                class="flex items-center border border-neutral-300 rounded-md overflow-hidden w-full"
+              >
+                <span
+                  class="m-1 px-3 py-2 bg-neutral-200 text-neutral-900 font-semibold"
+                  >Rp</span
+                >
+                <input
+                  type="number"
+                  placeholder="Maximum Price"
+                  class="w-full px-3 py-2 outline-none text-neutral-700 placeholder-neutral-500"
+                />
+              </div>
+            </div>
+
+            <hr class="border border-neutral-300 my-4" />
+
+            <div class="flex flex-col gap-[10px] p-4">
+              <h4 class="font-semibold text-md leading-md">Rating</h4>
+              <div id="ratings" class="flex flex-col gap-3"></div>
+            </div>
+          </div>
+
+          <!-- LIST PRODUCT -->
+          <div class="flex flex-col gap-3 lg:basis-[75%]">
+            <div id="count-product-mobile"></div>
+            <div class="flex gap-2 lg:items-center lg:justify-between">
+              <div id="count-product-desktop" class="hidden lg:block"></div>
+              <div class="flex gap-2 w-full lg:w-fit lg:gap-3">
+                <button
+                  class="lg:hidden border border-neutral-300 py-4 px-3 flex justify-between items-center rounded-xl w-full gap-[19px] h-[44px]"
+                >
+                  <span>Filter</span>
+                  <img
+                    src="/src/public/icons/filter-icon.svg"
+                    alt="filter-icon"
+                  />
+                </button>
+                <span
+                  class="self-center hidden lg:block font-bold text-md leading-md"
+                  >Sort</span
+                >
+                <button
+                  class="border border-neutral-300 px-3 flex justify-between items-center rounded-xl w-full gap-[19px] lg:text-md lg:leading-md lg:w-[167px] h-[44px]"
+                >
+                  Latest
+                  <img
+                    src="/src/public/icons/chveron-down.svg"
+                    alt="chveron-down"
+                  />
+                </button>
+              </div>
+            </div>
+            <!-- ProductList -->
+            <div
+              id="featured-product-container"
+              class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 py-4"
+            ></div>
+
+            <div class="flex py-2 px-4 justify-center">
+              <button
+                class="border border-neutral-300 rounded-xl font-medium text-md leading-md text-neutral-950 p-2 w-40"
+              >
+                Load More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <div id="footer" data-component="footer"></div>
     <script src="/src/js/injector.js"></script>
+    <script type="module" src="/src/js/handleProduct.js"></script>
+    <script>
+      const countProductMobile = document.getElementById(
+        'count-product-mobile'
+      );
+      const countProductDesktop = document.getElementById(
+        'count-product-desktop'
+      );
+
+      const pElement = document.createElement('p');
+      pElement.classList.add(
+        'text-xs',
+        'font-normal',
+        'text-neutral-700',
+        'leading-[16px]',
+        'lg:text-md',
+        'lg:leading-md'
+      );
+      pElement.textContent = 'Showing 160 product';
+
+      function updatePlacement() {
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+          countProductDesktop.appendChild(pElement);
+        } else {
+          countProductMobile.appendChild(pElement);
+        }
+      }
+
+      updatePlacement();
+
+      window.addEventListener('resize', updatePlacement);
+
+      // FILTER
+      const categories = ['All', 'Shoes', 'Clothes', 'Accessories', 'Shirts'];
+
+      const categoriesWrapper = document.getElementById('categories');
+
+      categoriesWrapper.innerHTML = categories
+        .map(
+          (cat) => `
+      <label class="inline-flex items-center gap-2 cursor-pointer relative">
+        <input
+          type="checkbox"
+          class="peer appearance-none w-5 h-5 border border-neutral-300 rounded-sm bg-white checked:bg-black checked:border-neutral-300"
+          ${cat === 'All' ? 'checked' : ''}
+        />
+        <svg
+          class="absolute w-5 h-5 text-white hidden peer-checked:block pointer-events-none"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 13l4 4L19 7" />
+        </svg>
+        <span class="font-normal text-md leading-md">${cat}</span>
+      </label>
+    `
+        )
+        .join('');
+
+      // RATINGS
+      const ratings = [5, 4, 3, 2, 1];
+      const ratingWrapper = document.getElementById('ratings');
+
+      ratingWrapper.innerHTML = ratings
+        .map(
+          (rate) => `
+      <label class="inline-flex items-center gap-2 cursor-pointer relative">
+        <input
+          type="checkbox"
+          class="peer appearance-none w-5 h-5 border border-neutral-300 rounded-sm bg-white checked:bg-black checked:border-neutral-300"
+        />
+        <svg
+          class="absolute w-5 h-5 text-white hidden peer-checked:block pointer-events-none"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 13l4 4L19 7" />
+        </svg>
+        <div class="flex items-center gap-1">
+          <img src="/src/public/icons/star-rating.svg" alt="star" class="w-5 h-5"/>
+          <span class="font-normal text-md leading-md">${rate}</span>
+        </div>
+      </label>
+    `
+        )
+        .join('');
+    </script>
   </body>
 </html>
