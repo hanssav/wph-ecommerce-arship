@@ -6,7 +6,7 @@ export const products = [
     code: 'SH',
     price: 275000,
     rating: 4.9,
-    src: './public/images/products/product-image1.png',
+    src: '/src/public/images/products/product-image1.png',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const products = [
     code: 'SHI',
     price: 800000,
     rating: 4.8,
-    src: './public/images/products/product-image2.png',
+    src: '/src/public/images/products/product-image2.png',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const products = [
     code: 'ACC',
     price: 1600000,
     rating: 4.7,
-    src: './public/images/products/product-image3.png',
+    src: '/src/public/images/products/product-image3.png',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const products = [
     code: 'SHI',
     price: 650000,
     rating: 4.6,
-    src: './public/images/products/product-image4.png',
+    src: '/src/public/images/products/product-image4.png',
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const products = [
     code: 'SHI',
     price: 375000,
     rating: 4.5,
-    src: './public/images/products/product-image5.png',
+    src: '/src/public/images/products/product-image5.png',
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const products = [
     code: 'SHI',
     price: 1300000,
     rating: 4.8,
-    src: './public/images/products/product-image6.png',
+    src: '/src/public/images/products/product-image6.png',
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export const products = [
     code: 'ACC',
     price: 220000,
     rating: 4.9,
-    src: './public/images/products/product-image7.png',
+    src: '/src/public/images/products/product-image7.png',
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const products = [
     code: 'ACC',
     price: 180000,
     rating: 4.7,
-    src: './public/images/products/product-image8.png',
+    src: '/src/public/images/products/product-image8.png',
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ export const products = [
     code: 'PAN',
     price: 2200000,
     rating: 4.8,
-    src: './public/images/products/product-image9.png',
+    src: '/src/public/images/products/product-image9.png',
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ export const products = [
     code: 'SH',
     price: 1900000,
     rating: 4.9,
-    src: './public/images/products/product-image10.png',
+    src: '/src/public/images/products/product-image10.png',
   },
   {
     id: 11,
@@ -96,7 +96,7 @@ export const products = [
     code: 'SHI',
     price: 450000,
     rating: 4.6,
-    src: './public/images/products/product-image11.png',
+    src: '/src/public/images/products/product-image11.png',
   },
   {
     id: 12,
@@ -105,7 +105,7 @@ export const products = [
     code: 'SHI',
     price: 950000,
     rating: 4.8,
-    src: './public/images/products/product-image12.png',
+    src: '/src/public/images/products/product-image12.png',
   },
   {
     id: 13,
@@ -114,7 +114,7 @@ export const products = [
     code: 'PAN',
     price: 120000,
     rating: 4.5,
-    src: './public/images/products/product-image13.png',
+    src: '/src/public/images/products/product-image13.png',
   },
   {
     id: 14,
@@ -123,7 +123,7 @@ export const products = [
     code: 'ACC',
     price: 320000,
     rating: 4.7,
-    src: './public/images/products/product-image14.png',
+    src: '/src/public/images/products/product-image14.png',
   },
   {
     id: 15,
@@ -132,7 +132,7 @@ export const products = [
     code: 'SHI',
     price: 1100000,
     rating: 4.9,
-    src: './public/images/products/product-image15.png',
+    src: '/src/public/images/products/product-image15.png',
   },
   {
     id: 16,
@@ -141,6 +141,6 @@ export const products = [
     code: 'SHI',
     price: 275000,
     rating: 4.8,
-    src: './public/images/products/product-image16.png',
+    src: '/src/public/images/products/product-image16.png',
   },
 ];
