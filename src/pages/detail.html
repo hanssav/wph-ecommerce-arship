@@ -10,10 +10,231 @@
     <div data-component="header" id="header"></div>
 
     <main class="px-4 py-6 lg:px-[120px]">
-      <section class="flex flex-col lg:gap-6"></section>
+      <section class="flex flex-col gap-2">
+        <p
+          class="flex gap-2 font-semibold text-xs leading-xs lg:text-md lg:leading-md"
+        >
+          <span>Home</span> <span>></span> <span>Detail</span> <span>></span>
+          <span class="font-normal text-neutral-700"
+            >Sneakers Court Minimalis</span
+          >
+        </p>
+      </section>
+
+      <section class="flex flex-col lg:flex-row py-4 gap-6 lg:gap-7">
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2 lg:w-[402px]">
+            <img
+              src="/src/public/images/products/product-image1.png"
+              alt="product-image1"
+              class="w-full rounded-xl"
+            />
+            <div
+              id="product-details"
+              class="flex gap-2 flex-nowrap overflow-x-hidden"
+            >
+              <!-- <img
+                src="/src/public/images/product-detail/product-detail1.png"
+                alt="prodduc-detail1"
+              /> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-0.5 lg:gap-2">
+            <h4
+              class="font-semibold text-md leading-md lg:text-xl lg:leading-xl"
+            >
+              Sneakers Court Minimalis
+            </h4>
+
+            <h3
+              class="font-bold text-xl leading-xl lg:text-display-md lg:leading-display-md"
+            >
+              Rp.275.000
+            </h3>
+
+            <div class="flex gap-1 lg:text-xl lg:leading-xl text-sm leading-sm">
+              <img src="/src/public/icons/star-rating.svg" alt="star-rating" />
+              <p>4.9</p>
+            </div>
+          </div>
+
+          <hr class="border border-neutral-300" />
+
+          <div class="flex flex-col gap-4">
+            <div class="flex">
+              <button
+                class="font-semibold text-sm leading-sm lg:text-md lg:leading-md w-full lg:w-fit py-2 px-4 border-b-4 border-black"
+                data-tab="tab1"
+              >
+                Deskripsi
+              </button>
+              <button
+                class="font-normal text-sm leading-sm lg:text-md lg:leading-md w-full lg:w-fit p-2 border-b-2 border-neutral-300"
+                data-tab="tab2"
+              >
+                Spesifikasi
+              </button>
+            </div>
+
+            <div id="tab1" class="tab-content">
+              <p
+                class="font-normal text-sm leading-sm lg:text-md lg:leading-md text-neutral-600"
+              >
+                Sneakers Court Minimalis – Ivory Beige  Sepatu sneakers bergaya
+                minimalis dengan kombinasi warna ivory dan beige yang elegan.
+                Terbuat dari material kulit sintetis berkualitas dengan sentuhan
+                suede halus di bagian panel samping dan depan.
+
+                <li
+                  class="font-normal text-sm leading-sm lg:text-md lg:leading-md text-neutral-600"
+                >
+                  Desain: Low-top dengan siluet klasik yang timeless
+                </li>
+                <li
+                  class="font-normal text-sm leading-sm lg:text-md lg:leading-md text-neutral-600"
+                >
+                  Material: Kulit sintetis premium + suede sintetis
+                </li>
+                <li
+                  class="font-normal text-sm leading-sm lg:text-md lg:leading-md text-neutral-600"
+                >
+                  Sol: Outsole karet anti-slip dengan warna natural gum untuk
+                  daya cengkeram yang baik
+                </li>
+                <li
+                  class="font-normal text-sm leading-sm lg:text-md lg:leading-md text-neutral-600"
+                >
+                  enyamanan: Insole empuk dengan bantalan ekstra untuk pemakaian
+                  sehari-hari
+                </li>
+                <li
+                  class="font-normal text-sm leading-sm lg:text-md lg:leading-md text-neutral-600"
+                >
+                  Warna: Ivory Beige Gaya: Cocok untuk casual look, street
+                  style, maupun semi-formal
+                </li>
+              </p>
+            </div>
+
+            <hr class="border border-neutral-300" />
+
+            <div class="flex gap-4 items-center">
+              <h4
+                class="font-semibold text-sm leading-sm lg:text-md lg:leading-md"
+              >
+                Quantity
+              </h4>
+
+              <div
+                class="inline-flex items-center border border-gray-300 rounded-xl px-3 py-1"
+              >
+                <button class="text-lg leading-lg font-semibold px-2">−</button>
+
+                <span class="mx-3 text-lg leading-lg font-medium">2</span>
+
+                <button class="text-lg leeading-lg font-semibold px-2">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <button
+              class="bg-black text-white w-full p-2 rounded-md text-md leading-md lg:max-w-[312px]"
+            >
+              + Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+      <hr class="border border-neutral-300" />
+
+      <section class="flex flex-col py-4 gap-4 lg:gap-6">
+        <h4
+          class="font-bold text-display-xs leading-display-xs lg:text-display-md lg:leading-display-md"
+        >
+          Related Product
+        </h4>
+
+        <div
+          id="related-product"
+          class="grid grid-cols-2 lg:grid-cols-4 lg:gap-5 gap-4"
+        ></div>
+      </section>
     </main>
 
     <div id="footer" data-component="footer"></div>
     <script src="/src/js/injector.js"></script>
+    <script type="module">
+      const images = [
+        '/src/public/images/product-detail/product-detail1.png',
+        '/src/public/images/product-detail/product-detail2.png',
+        '/src/public/images/product-detail/product-detail3.png',
+        '/src/public/images/product-detail/product-detail4.png',
+        '/src/public/images/product-detail/product-detail5.png',
+      ];
+
+      const productDetailsWrapper = document.getElementById('product-details');
+
+      // Render pakai map
+      images.map((src, i) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `product-detail${i + 1}`;
+        img.className =
+          'object-cover max-w-[74px] lg:min-w-[82p] lg:min-h-[82px]'; // con
+        // toh styling Tailwind
+        img.style.maxWidth = '74px';
+        img.style.maxHeight = '74px';
+        productDetailsWrapper.appendChild(img);
+      });
+
+      import { products } from '/src/js/products.js';
+
+      const featureProductContainer =
+        document.getElementById('related-product');
+
+      function renderProducts(products) {
+        // acak array (pakai sort dengan random)
+        const shuffled = [...products].sort(() => Math.random() - 0.5);
+
+        // ambil 4 pertama
+        const selected = shuffled.slice(0, 4);
+
+        // clear container biar ga numpuk
+        featureProductContainer.innerHTML = '';
+
+        selected.forEach((product) => {
+          const productCard = document.createElement('div');
+          productCard.className =
+            'product-card rounded-xl shadow-[0_0_20px_0_#CBCACA40]';
+
+          productCard.innerHTML = `
+      <img
+        src="${product.src}"
+        alt="product-image-${product.id}"
+        class="rounded-xs lg:w-full"
+      />
+      <div
+        class="product-detail text-sm leading-sm lg:text-md lg:leading-md p-3 gap-3"
+      >
+        <p class="font-normal">${product.name}</p>
+        <h4 class="price font-bold">Rp.${product.price.toLocaleString()}</h4>
+        <div class="flex justify-items-cente gap-[2px]">
+          <img src="/src/public/icons/star-rating.svg" alt="star-rating" />
+          <p>${product.rating}</p>
+        </div>
+      </div>
+    `;
+
+          featureProductContainer.appendChild(productCard);
+        });
+      }
+
+      // panggil render
+      renderProducts(products);
+    </script>
   </body>
 </html>
