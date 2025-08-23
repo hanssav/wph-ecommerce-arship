@@ -10,7 +10,8 @@ function renderProducts(products) {
       'product-card rounded-xl shadow-[0_0_20px_0_#CBCACA40]';
 
     productCard.innerHTML = `
-          <img
+         <a href="/src/pages/detail.html?id=${product.id}" class="block">
+            <img
               src="${product.src}"
               alt="product-image-${product.id}"
               class="rounded-xs lg:w-full"
@@ -21,13 +22,16 @@ function renderProducts(products) {
             >
               <p class="font-normal">${product.name}</p>
 
-              <h4 class="price font-bold">Rp.${product.price.toLocaleString()}</h4>
-              <div class="flex justify-items-cente gap-[2px]">
-                <img src="/src/public/icons/star-rating.svg" alt="star-rating" />
+              <h4 class="price font-bold">
+                Rp.${product.price.toLocaleString()}
+              </h4>
 
+              <div class="flex justify-items-center gap-[2px]">
+                <img src="/src/public/icons/star-rating.svg" alt="star-rating" />
                 <p>${product.rating}</p>
               </div>
             </div>
+          </a>
           `;
 
     featureProductContainer.appendChild(productCard);
